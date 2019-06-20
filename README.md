@@ -1,3 +1,26 @@
+## This is yet another boiletplate based on CRA, with : 
+- Redux powered by Rematch (https://github.com/rematch/rematch/blob/master/docs/plugins.md) with
+  - Persist (todo)
+  - Loading (todo)
+  - Select (todo)
+- Connected React Router
+- Typescript
+- Ant Design
+- Reactotron (todo) (https://github.com/infinitered/reactotron)
+- Cypress (todo)
+- styled component (https://www.styled-components.com/)
+- Atomic Design concepts (https://github.com/danilowoz/react-atomic-design)
+
+It allows you to create a React App with best tools in seconds. 
+
+I'm using it for every new projects and save me a lot of time by focusing on code, not on boilerplate.
+
+This boilerplate is 100% compatible with next versions of CRA.
+
+Jump in !
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
