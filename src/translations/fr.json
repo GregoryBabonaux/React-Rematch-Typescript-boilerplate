@@ -1,4 +1,13 @@
 {
   "Welcome": "Bienvenue",
-  "Go to about page": "Aller à la page à propos"
+  "Go to about page": "Aller à la page à propos",
+  "Required": "Ce champ est obligatoire",
+  "loginPage": {
+    "Title": "Identification",
+    "Connect": "Connexion"
+  },
+  "formValidation": {
+    "Required": "Ce champ est obligatoire",
+    "Email": "Ce champ doit contenir un E-Mail valide"
+  }
 }

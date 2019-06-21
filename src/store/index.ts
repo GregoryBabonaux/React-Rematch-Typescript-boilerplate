@@ -12,8 +12,6 @@ import { connectRouter, routerMiddleware } from "connected-react-router";
 import * as models from './models'
 import Reactotron from "ReactotronConfig";
 
-console.log(Reactotron)
-
 // Connected React Router config
 // https://codesandbox.io/s/72o3k1z3nq
 export const history = createBrowserHistory();

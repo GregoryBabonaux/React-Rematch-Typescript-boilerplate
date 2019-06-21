@@ -25,7 +25,11 @@ type connectedProps = ReturnType<typeof mapState> & ReturnType<typeof mapDispatc
 // use `type Props = connectedProps & { ...additionalTypings }
 type Props = connectedProps & { t: i18n.TFunction }
 
-class Home extends React.PureComponent<Props> {
+type State = {
+  error: Boolean
+}
+
+class Home extends React.PureComponent<Props, State> {
 
   state = {
     error: false,

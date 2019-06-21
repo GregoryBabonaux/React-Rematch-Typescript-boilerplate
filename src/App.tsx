@@ -8,8 +8,9 @@ import './App.css';
 import './translations/i18n';
 
 // scenes
-import Home from './screens/Home';
-import About from './screens/About';
+import Home from 'pages/Home';
+import About from 'pages/About';
+import Login from 'pages/Auth/Login';
 
 const { Header, Content, Footer } = Layout;
 
@@ -26,6 +27,8 @@ const App = () => (
         <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>
         <Menu.Item key="2">Sheeps</Menu.Item>
         <Menu.Item key="3"><Link to="/about">About</Link></Menu.Item>
+        <Menu.Item key="4"><Link to="/login">Login</Link></Menu.Item>
+
       </Menu>
     </Header>
     <Content style={{ padding: '0 50px' }}>
@@ -34,6 +37,7 @@ const App = () => (
       </Breadcrumb>
       <Switch>
         <Route path="/about" component={About} />
+        <Route path="/login" component={Login} />
         <Route path="/" component={Home} />
       </Switch>
   

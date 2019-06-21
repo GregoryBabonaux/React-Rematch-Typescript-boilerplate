@@ -6,12 +6,13 @@
 - Connected React Router
 - i18n (https://github.com/i18next/react-i18next)
 - Typescript
+- Formik (https://jaredpalmer.com/formik/)
 - Ant Design (https://ant.design)
 - Reactotron (todo) (https://github.com/infinitered/reactotron)
 - Cypress (todo)
 - styled component (https://www.styled-components.com/)
 - Atomic Design concepts (https://github.com/danilowoz/react-atomic-design)
-- Sentry (todo) (https://sentry.io/welcome/)
+- Sentry (https://sentry.io/welcome/)
 - Error Boundaries
 
 It allows you to create a React App with best tools in seconds. 

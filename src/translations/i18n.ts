@@ -12,7 +12,7 @@ export default i18n
   .init({
     resources,
     lng: "fr",
-    keySeparator: false,
+    // keySeparator: false,
     interpolation: {
       escapeValue: false
     }
