@@ -6,6 +6,7 @@ import { getPersistor } from '@rematch/persist'
 import { PersistGate } from "redux-persist/integration/react";
 
 // local
+import './ReactotronConfig';
 import { store, history } from './store'
 
 // local

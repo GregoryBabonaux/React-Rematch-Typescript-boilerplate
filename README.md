@@ -11,6 +11,8 @@
 - Cypress (todo)
 - styled component (https://www.styled-components.com/)
 - Atomic Design concepts (https://github.com/danilowoz/react-atomic-design)
+- Sentry (todo)
+- Error Boundaries
 
 It allows you to create a React App with best tools in seconds. 
 
