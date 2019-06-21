@@ -5,6 +5,7 @@ import { Layout, Menu, Breadcrumb } from 'antd';
 // local
 import 'antd/dist/antd.css';
 import './App.css';
+import './translations/i18n';
 
 // scenes
 import Home from './screens/Home';

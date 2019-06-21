@@ -1,11 +1,12 @@
 ## This is yet another boiletplate based on CRA, with : 
 - Redux powered by Rematch (https://github.com/rematch/rematch/blob/master/docs/plugins.md) with
-  - Persist (todo)
-  - Loading (todo)
-  - Select (todo)
+  - Persist
+  - Loading
+  - Select
 - Connected React Router
+- i18n (https://github.com/i18next/react-i18next)
 - Typescript
-- Ant Design
+- Ant Design (https://ant.design)
 - Reactotron (todo) (https://github.com/infinitered/reactotron)
 - Cypress (todo)
 - styled component (https://www.styled-components.com/)
