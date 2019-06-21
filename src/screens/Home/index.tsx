@@ -7,7 +7,9 @@ import { withTranslation } from "react-i18next";
 import i18n from 'i18next';
 
 // local
-import { iRootState } from '../../store'
+import { iRootState } from 'store';
+
+import H1 from 'atoms/H1';
 
 const mapState = (state: iRootState) => ({
   counter: state.counter,
@@ -31,7 +33,7 @@ class Home extends React.PureComponent<Props> {
       <div>
         <div className="App">
           <header className="App-header">
-            <h1>{t('Welcome')}</h1>
+            <H1>{t('Welcome')}</H1>
             <Button type="primary" onClick={() => increment(1)}>{counter}</Button>
             
             <Link to="/about">{t('Go to about page')}</Link>

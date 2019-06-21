@@ -17,6 +17,7 @@
     "@types/react-router-redux": "^5.0.18",
     "@types/redux": "^3.6.0",
     "@types/redux-persist": "^4.3.1",
+    "@types/styled-components": "^4.1.16",
     "antd": "^3.19.6",
     "connected-react-router": "^6.0.0",
     "i18next": "^17.0.4",
@@ -28,6 +29,7 @@
     "react-scripts": "3.0.1",
     "redux": "^4.0.1",
     "redux-persist": "^5.10.0",
+    "styled-components": "^4.3.2",
     "typescript": "3.4.0"
   },
   "scripts": {
