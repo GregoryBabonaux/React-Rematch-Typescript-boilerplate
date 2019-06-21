@@ -27,12 +27,21 @@ type Props = connectedProps & { t: i18n.TFunction }
 
 class Home extends React.PureComponent<Props> {
 
+  state = {
+    error: false,
+  }
+
   public willProduceError = () => {
-    throw new Error('Oooops');
+    this.setState({ error: true });
   }
 
   render() {
-    const { props: { increment, counter, t }, willProduceError } = this;
+    const { props: { increment, counter, t }, state: { error }, willProduceError } = this;
+
+    if (error) {
+      throw new Error('Oooops');
+    }
+    
     return (
       <div>
         <div className="App">

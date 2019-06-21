@@ -13,6 +13,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { SENTRY_DSN } from 'config';
+import ErrorBoundary from 'containers/ErrorBoundary';
 
 Sentry.init({dsn: SENTRY_DSN});
 
@@ -22,7 +23,9 @@ render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <PersistGate persistor={persistor}>
-        <App />
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
       </PersistGate>
     </ConnectedRouter>
   </Provider>
