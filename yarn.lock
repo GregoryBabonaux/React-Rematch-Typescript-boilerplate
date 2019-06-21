@@ -1173,6 +1173,58 @@
   dependencies:
     reselect "^3.0.1"
 
+"@sentry/browser@^5.4.2":
+  version "5.4.2"
+  resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-5.4.2.tgz#f5c6a97c4ba4ae4e646fa14dc7d3311fa7d62a93"
+  integrity sha512-km1lf9jYlNTLDUAEoopisUA3+pa9+bYi7aXy8jR5OuDsLDo+mUACTXaRu62iNiEPgBtDO9dg8jz2ZhjwriNUug==
+  dependencies:
+    "@sentry/core" "5.4.2"
+    "@sentry/types" "5.4.2"
+    "@sentry/utils" "5.4.2"
+    tslib "^1.9.3"
+
+"@sentry/core@5.4.2":
+  version "5.4.2"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-5.4.2.tgz#8e4dcaae13447128ac51734e9c2de15d05859864"
+  integrity sha512-B7AwuWKOziozLNXbgCXNHBminh4R+q/h19CSX7Cz0awiRKsKcuIK4iBsTd+b+tiKfkPYayxi337eZchdbg/rPQ==
+  dependencies:
+    "@sentry/hub" "5.4.2"
+    "@sentry/minimal" "5.4.2"
+    "@sentry/types" "5.4.2"
+    "@sentry/utils" "5.4.2"
+    tslib "^1.9.3"
+
+"@sentry/hub@5.4.2":
+  version "5.4.2"
+  resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-5.4.2.tgz#23e6bf6f64a3bd35725fdc540e47bcdb49f87ae4"
+  integrity sha512-2iS1TxiLsSj0Vc1QUw57uM8FDmVs7reYEwjCEX8+ihmemO2OoPpGeqsG9e3MRNcZp3RDkv87Pon8gOKrXhvOPA==
+  dependencies:
+    "@sentry/types" "5.4.2"
+    "@sentry/utils" "5.4.2"
+    tslib "^1.9.3"
+
+"@sentry/minimal@5.4.2":
+  version "5.4.2"
+  resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-5.4.2.tgz#525ea2b4fb3914ddae17c4b59a20746565699f07"
+  integrity sha512-9fVm/IZvC8Mxxp2vW5M9vCWlyP6V7Ba0qhEQ8PkUOC8MEKQUm0dFlEyPek2PdYueyi8+XHTk4txCHphzS/lJSg==
+  dependencies:
+    "@sentry/hub" "5.4.2"
+    "@sentry/types" "5.4.2"
+    tslib "^1.9.3"
+
+"@sentry/types@5.4.2":
+  version "5.4.2"
+  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-5.4.2.tgz#4ab327bced2cfd961dc7a29f0ff43398f913f6a6"
+  integrity sha512-yh1fd7x5lLOIZ8W3A1I792B3jowJVCWp4HcTRikjTsjbF8lcURY62m+hiLYUFPTIX99AlFRIPiApDkWiwMGYMA==
+
+"@sentry/utils@5.4.2":
+  version "5.4.2"
+  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-5.4.2.tgz#c88c6c08d635e1744a443cfefe9e2ed7fa250e4e"
+  integrity sha512-AW7/TGt2HiPQB8lJ8NgMgaFAIDQpKDF+wV8nENRbC1CP1zzcvb1QBF4zBL2auDT4fhkhVa817064s7vlDiJVLQ==
+  dependencies:
+    "@sentry/types" "5.4.2"
+    tslib "^1.9.3"
+
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.2.0.tgz#dadcb6218503532d6884b210e7f3c502caaa44b1"
@@ -10493,6 +10545,11 @@ tslib@^1.8.1, tslib@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
   integrity sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
+
+tslib@^1.9.3:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
+  integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
 
 tsutils@^3.7.0:
   version "3.10.0"

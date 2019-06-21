@@ -4,15 +4,17 @@ import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'connected-react-router'
 import { getPersistor } from '@rematch/persist'
 import { PersistGate } from "redux-persist/integration/react";
+import * as Sentry from '@sentry/browser';
 
 // local
 import './ReactotronConfig';
 import { store, history } from './store'
-
-// local
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { SENTRY_DSN } from 'config';
+
+Sentry.init({dsn: SENTRY_DSN});
 
 const persistor = getPersistor()
 
