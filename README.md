@@ -14,6 +14,7 @@
 - Atomic Design concepts (https://github.com/danilowoz/react-atomic-design)
 - Sentry (https://sentry.io/welcome/)
 - Error Boundaries
+- Storybook (https://storybook.js.org/)
 
 It allows you to create a React App with best tools in seconds. 
 
