@@ -1,28 +1,51 @@
-## This is yet another boiletplate based on CRA, with : 
+## This is yet another boiletplate based on CRA
+
+I'm bored (you probably bored too) to set-up the same tools at every single projects, fix Typescript, create a store, configure routing... so i deciced to create a brand new boilerplate with : 
+
 - Redux powered by Rematch (https://github.com/rematch/rematch/blob/master/docs/plugins.md) with
   - Persist
   - Loading
   - Select
-- Connected React Router
+- Connected React Router (https://github.com/supasate/connected-react-router)
 - i18n (https://github.com/i18next/react-i18next)
-- Typescript
+- Typescript 
 - Formik (https://jaredpalmer.com/formik/)
 - Ant Design (https://ant.design)
-- Reactotron (todo) (https://github.com/infinitered/reactotron)
+- Reactotron (https://github.com/infinitered/reactotron)
 - Cypress (todo)
 - styled component (https://www.styled-components.com/)
 - Atomic Design concepts (https://github.com/danilowoz/react-atomic-design)
 - Sentry (https://sentry.io/welcome/)
 - Error Boundaries
-- Storybook (https://storybook.js.org/)
+- Storybook (https://storybook.js.org/) with Typescript compatibily (thannks to https://medium.com/@dandobusiness/setting-up-a-react-typescript-storybook-project-5e4e9f540568)
+- Json server (https://github.com/typicode/json-server) is used to simulate some endpoints, it's usefull to understand effects in rematch models (sheep)
 
-It allows you to create a React App with best tools in seconds. 
+This boilerplate allows you to create a React App with best tools, in seconds. 
 
-I'm using it for every new projects and save me a lot of time by focusing on code, not on boilerplate.
+I'm using it for every new projects and it save me a lot of time by focusing on code, not on boilerplate.
 
-This boilerplate is 100% compatible with next versions of CRA.
+You can easly adapt this to your own project. 
+
+It's 100% compatible with next versions of CRA, don't need to eject, but you can if you want to.
 
 Jump in !
+
+--- 
+- Launch project : 
+
+`yarn install`
+
+`yarn start`
+
+- Launch Storybook
+
+`yarn storybook`
+
+- Launch Json Server :
+
+`json-server --watch data/index.js --port 3004`
+
+
 
 ---
 

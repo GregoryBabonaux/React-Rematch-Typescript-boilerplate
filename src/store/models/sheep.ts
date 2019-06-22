@@ -1,10 +1,21 @@
 import { createModel } from '@rematch/core';
 import { push } from 'connected-react-router';
 
-export type CounterState = number;
+export type SheepState = {
+  id: Number,
+  name: String,
+}
 
-export const counter = createModel({
-  state: 0, // initial state
+export type SheepsState = {
+  sheeps: Array<SheepState>,
+};
+
+const INITIAL_STATE : SheepsState = {
+  sheeps: [],
+}
+
+export const sheep = createModel({
+  state: INITIAL_STATE, // initial state
   reducers: {
     // handle state changes with pure functions
     increment(state, payload) {
@@ -15,13 +26,8 @@ export const counter = createModel({
   effects: (dispatch) => ({
     // handle state changes with impure functions.
     // use async/await for async actions
-    async incrementAsync(payload: number, rootState) {
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      dispatch.counter.increment(payload)
+    async getSheeps(payload: number, rootState) {
+
     },
-    testingPurpose(state) {
-      console.log(state)
-      dispatch(push('/about'));
-    }
   })
 })
