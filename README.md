@@ -1,7 +1,18 @@
 ## This is yet another boiletplate based on CRA
 
-I'm bored (you probably bored too) to set-up the same tools at every single projects, fix Typescript, create a store, configure routing... so i deciced to create a brand new boilerplate with : 
+I'm bored (you probably bored too) to set-up the same tools at every single projects, fix Typescript, create a store, configure routing... so i deciced to create a brand new boilerplate.
 
+This boilerplate allows you to create a React App with best tools, in seconds. 
+
+I'm using it for every new projects and it save me a lot of time by focusing on code, not on boilerplate.
+
+You can easly adapt this to your own project. 
+
+It's 100% compatible with next versions of CRA, don't need to eject, but you can if you want to.
+
+Jump in !
+
+### Tools
 - Redux powered by Rematch (https://github.com/rematch/rematch/blob/master/docs/plugins.md) with
   - Persist
   - Loading
@@ -20,17 +31,19 @@ I'm bored (you probably bored too) to set-up the same tools at every single proj
 - Storybook (https://storybook.js.org/) with Typescript compatibily (thannks to https://medium.com/@dandobusiness/setting-up-a-react-typescript-storybook-project-5e4e9f540568)
 - Json server (https://github.com/typicode/json-server) is used to simulate some endpoints, it's usefull to understand effects in rematch models (sheep)
 
-This boilerplate allows you to create a React App with best tools, in seconds. 
 
-I'm using it for every new projects and it save me a lot of time by focusing on code, not on boilerplate.
 
-You can easly adapt this to your own project. 
+### About Storybook
+Stories must be saved in src/stories folder. You can change this by editing storybook configuration in .storybook folder at the root.
 
-It's 100% compatible with next versions of CRA, don't need to eject, but you can if you want to.
+### About Reactotron
+Don't forget to install Reactotron App. Check src/ReactotronConfig if you need to change name, IP & port
 
-Jump in !
+### About imports
+Absolute imports are avalaible from src folder
 
---- 
+## Commands
+
 - Launch project : 
 
 `yarn install`
