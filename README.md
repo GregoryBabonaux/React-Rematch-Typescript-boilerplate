@@ -18,20 +18,22 @@ Jump in !
   - Loading
   - Select
 - Connected React Router (https://github.com/supasate/connected-react-router)
-- i18n (https://github.com/i18next/react-i18next)
+- i18next (https://github.com/i18next/react-i18next)
 - Typescript 
 - Formik (https://jaredpalmer.com/formik/)
 - Ant Design (https://ant.design)
 - Reactotron (https://github.com/infinitered/reactotron)
-- Cypress (todo)
+- Loadable (https://github.com/jamiebuilds/react-loadable)
 - styled component (https://www.styled-components.com/)
 - Atomic Design concepts (https://github.com/danilowoz/react-atomic-design)
 - Sentry (https://sentry.io/welcome/)
 - Error Boundaries
 - Storybook (https://storybook.js.org/) with Typescript compatibily (thannks to https://medium.com/@dandobusiness/setting-up-a-react-typescript-storybook-project-5e4e9f540568)
+- Axios (https://github.com/axios/axios)
 - Json server (https://github.com/typicode/json-server) is used to simulate some endpoints, it's usefull to understand effects in rematch models (sheep)
 
-
+### Config
+Don't forget to edit src/config.sample.ts (rename it config.ts and edit constants)
 
 ### About Storybook
 Stories must be saved in src/stories folder. You can change this by editing storybook configuration in .storybook folder at the root.
@@ -41,6 +43,21 @@ Don't forget to install Reactotron App. Check src/ReactotronConfig if you need t
 
 ### About imports
 Absolute imports are avalaible from src folder
+
+### About Loadable
+You can find an example in App.tsx, where Sheeps page is loaded with Loadable, this way : 
+
+`const LoadableSheeps = Loadable({
+  loader: () => import('pages/Sheeps'),
+  loading: Loading,
+});`
+
+You can use loadable for any component you want. 
+
+### About Axios
+Axios is used to make api calls.
+
+It provide interceptors where you can set JWT before request, and handling response status (for, like in this code, handling a 401 and redirect user to the login screen)
 
 ## Commands
 
@@ -58,7 +75,9 @@ Absolute imports are avalaible from src folder
 
 `json-server --watch data/index.js --port 3004`
 
+Or :
 
+`yarn jsonserver`
 
 ---
 
