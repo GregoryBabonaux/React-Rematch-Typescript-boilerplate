@@ -8,7 +8,6 @@ export const counter = createModel({
   reducers: {
     // handle state changes with pure functions
     increment(state, payload) {
-      console.log(state, payload)
       return state + payload
     },
   },

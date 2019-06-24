@@ -1,40 +1,41 @@
 import React from 'react'
-import { Provider } from 'react-redux'
-import { render, fireEvent, cleanup } from '@testing-library/react'
+import { Provider } from 'react-redux';
+import { Router } from 'react-router-dom';
+import { createMemoryHistory } from 'history';
+import { render, fireEvent, cleanup } from '@testing-library/react';
 import { store } from 'store';
 
 import App from './App';
 
 afterEach(cleanup)
 
-// this is a handy function that I normally make available for all my tests
-// that deal with connected components.
-// you can provide initialState or the entire store that the ui is rendered with
-function renderWithRedux(ui) {
+// Render our App component with Redux & Router, so we can test both
+function renderWithReduxAndRouter(ui) {
+  const history = createMemoryHistory({ initialEntries: ['/'] })
   return {
-    ...render(<Provider store={store}>{ui}</Provider>),
-    // adding `store` to the returned utilities to allow us
-    // to reference it in our tests (just try to avoid using
-    // this to test implementation details).
+    ...render(<Provider store={store}><Router history={history}>{ui}</Router></Provider>),
     store,
+    history,
   }
 }
 
-test('can increment counter in <Home />', () => {
-  const { getByTestId } = renderWithRedux(<App />)
+// testing Home content
+// Note we are mounting a connected component 
+test('can render <App /> and increment counter in <Home />', () => {
+  const { getByTestId } = renderWithReduxAndRouter(<App />)
   fireEvent.click(getByTestId('counter-increment'))
   expect(getByTestId('counter-increment').textContent).toBe('1')
-})
+  fireEvent.click(getByTestId('counter-increment'))
+  fireEvent.click(getByTestId('counter-increment'))
+  fireEvent.click(getByTestId('counter-increment'))
+  expect(getByTestId('counter-increment').textContent).toBe('4')
+});
 
-
-
-
-
-
-
-
-// it('renders without crashing', () => {
-//   const div = document.createElement('div');
-//   ReactDOM.render(<App store={{}}/>, div);
-//   ReactDOM.unmountComponentAtNode(div);
-// });
+// testing navigation 
+test('can render <App /> and use navigation Links', () => {
+  const { container, getByText } = renderWithReduxAndRouter(<App />);
+  expect(container.innerHTML).toMatch('Bienvenue')
+  const leftClick = { button: 0 }
+  fireEvent.click(getByText(/sheeps/i), leftClick)
+  expect(container.innerHTML).toMatch('Sheeps')
+});
