@@ -51,7 +51,7 @@ class Home extends React.PureComponent<Props, State> {
         <div className="App">
           <header className="App-header">
             <H1>{t('Welcome')}</H1>
-            <Button type="primary" onClick={() => increment(1)}>{counter}</Button>
+            <Button type="primary" onClick={() => increment(1)} data-testid="counter-increment">{counter}</Button>
             <Divider />
             <Button type="primary" onClick={() => testingPurpose()}>Redirect with effect</Button>
             <Divider/>
