@@ -28,7 +28,7 @@ client.interceptors.response.use( (response) => {
 }, (error) => { 
   // error.response is undefined in case of POST and 401 response
   // only get a Network Error 
-  if (error.response.status === 401) { 
+  if (error && error.response && error.response.status === 401) { 
     dispatch.auth.logoutUser(null);
   }
   return Promise.reject(error.response)

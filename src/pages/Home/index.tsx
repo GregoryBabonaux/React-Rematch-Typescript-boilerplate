@@ -40,7 +40,7 @@ class Home extends React.PureComponent<Props, State> {
   }
 
   render() {
-    const { props: { increment, counter, t }, state: { error }, willProduceError } = this;
+    const { props: { increment, testingPurpose, counter, t }, state: { error }, willProduceError } = this;
 
     if (error) {
       throw new Error('Oooops');
@@ -53,6 +53,8 @@ class Home extends React.PureComponent<Props, State> {
             <H1>{t('Welcome')}</H1>
             <Button type="primary" onClick={() => increment(1)}>{counter}</Button>
             <Divider />
+            <Button type="primary" onClick={() => testingPurpose()}>Redirect with effect</Button>
+            <Divider/>
             <Button type="danger" onClick={willProduceError}>Create an error (Sentry testing )</Button>
             <Link to="/about">{t('Go to about page')}</Link>
           </header>

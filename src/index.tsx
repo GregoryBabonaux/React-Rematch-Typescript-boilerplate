@@ -8,7 +8,7 @@ import * as Sentry from '@sentry/browser';
 
 // local
 import './ReactotronConfig';
-import { store, history } from './store'
+import { store, history } from './store';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
