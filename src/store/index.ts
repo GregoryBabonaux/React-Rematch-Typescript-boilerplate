@@ -69,4 +69,4 @@ export const { dispatch } = store;
 
 export type Store = typeof store
 export type Dispatch = typeof store.dispatch
-export type iRootState = RematchRootState<typeof models>
+export type iRootState = RematchRootState<typeof models> & LoadingState<typeof models>;

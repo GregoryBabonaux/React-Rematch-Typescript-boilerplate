@@ -11,6 +11,7 @@ import { SheepType } from 'store/models/sheep';
 
 const mapState = (state: iRootState) => ({
   sheeps: state.sheep.sheeps,
+  loading: state.loading.effects.sheep.getSheeps,
 });
 
 const mapDispatch = (dispatch: any) => ({
@@ -31,15 +32,23 @@ class Sheeps extends React.PureComponent<Props, State> {
   }
 
   render() {
-    const { props: { sheeps } } = this;
+    const { props: { sheeps, loading } } = this;
     return (
       <div>
         <H1 color="000">Sheeps</H1>
-        <ul>
-          {sheeps && sheeps.map((sheep: SheepType, key: number) => (
-            <li key={key}>{sheep.name}</li>
-          ))}
-        </ul>
+
+        {
+          loading ? (
+            <div>Chargement des moutons, veuillez patienbééééééééééééé</div>
+          ) :
+          (
+            <ul>
+              {sheeps && sheeps.map((sheep: SheepType, key: number) => (
+                <li key={key}>{sheep.name}</li>
+              ))}
+            </ul>
+          )
+        }
       </div>
     )
   }

@@ -31,6 +31,7 @@ Jump in !
 - Storybook (https://storybook.js.org/) with Typescript compatibily (thannks to https://medium.com/@dandobusiness/setting-up-a-react-typescript-storybook-project-5e4e9f540568)
 - Axios (https://github.com/axios/axios)
 - Json server (https://github.com/typicode/json-server) is used to simulate some endpoints, it's usefull to understand effects in rematch models (sheep)
+- React Testing Library (https://testing-library.com/docs/react-testing-library/intro)
 
 ### Config
 Don't forget to edit src/config.sample.ts (rename it config.ts and edit constants)
