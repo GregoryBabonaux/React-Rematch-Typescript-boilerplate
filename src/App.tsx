@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Switch, Link } from 'react-router-dom';
+import { Route, Switch, Link, withRouter } from 'react-router-dom';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import Loadable from 'react-loadable';
 
@@ -22,24 +22,30 @@ const LoadableSheeps = Loadable({
   loading: Loading,
 });
 
+type Props = {
+  location: {
+    pathname: string
+  },
+}
 
 const { Header, Content, Footer } = Layout;
 
-const App = () => (
-  <Layout className="layout">
-    <Router history={history}>
+const App = (props: Props) => {
+  console.log(props.location.pathname);
+  return (
+    <Layout className="layout">
       <Header>
         <div className="logo" />
         <Menu
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={['1']}
+          defaultSelectedKeys={['/']}
           style={{ lineHeight: '64px' }}
-        >
-          <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>
-          <Menu.Item key="2"><Link to="/sheeps">Sheeps</Link></Menu.Item>
-          <Menu.Item key="3"><Link to="/about">About</Link></Menu.Item>
-          <Menu.Item key="4"><Link to="/login">Login</Link></Menu.Item>
+          selectedKeys={[props.location.pathname]}>
+          <Menu.Item key="/"><Link to="/">Home</Link></Menu.Item>
+          <Menu.Item key="/sheeps"><Link to="/sheeps">Sheeps</Link></Menu.Item>
+          <Menu.Item key="/about"><Link to="/about">About</Link></Menu.Item>
+          <Menu.Item key="/login"><Link to="/login">Login</Link></Menu.Item>
 
         </Menu>
       </Header>
@@ -55,9 +61,8 @@ const App = () => (
         </Switch>
       </Content>
       <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
-    </Router>
-  </Layout>
-  
-);
+    </Layout>
+  )
+};
 
-export default App;
+export default withRouter(App);

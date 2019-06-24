@@ -5,6 +5,8 @@ import { ConnectedRouter } from 'connected-react-router'
 import { getPersistor } from '@rematch/persist'
 import { PersistGate } from "redux-persist/integration/react";
 import * as Sentry from '@sentry/browser';
+import { Router } from 'react-router-dom';
+
 
 // local
 import './ReactotronConfig';
@@ -24,7 +26,9 @@ render(
     <ConnectedRouter history={history}>
       <PersistGate persistor={persistor}>
         <ErrorBoundary>
-          <App />
+          <Router history={history}>
+            <App />
+          </Router>
         </ErrorBoundary>
       </PersistGate>
     </ConnectedRouter>
