@@ -8,7 +8,7 @@ import 'antd/dist/antd.css';
 import './App.css';
 import './translations/i18n';
 import Loading from 'atoms/Loading';
-import { history } from './store';
+import { RouteComponentProps } from "react-router";
 
 // scenes
 import Home from 'pages/Home';
@@ -22,16 +22,11 @@ const LoadableSheeps = Loadable({
   loading: Loading,
 });
 
-type Props = {
-  location: {
-    pathname: string
-  },
-}
+type PropsType = RouteComponentProps;
 
 const { Header, Content, Footer } = Layout;
 
-const App = (props: Props) => {
-  console.log(props.location.pathname);
+const App = (props: PropsType) => {
   return (
     <Layout className="layout">
       <Header>
@@ -65,4 +60,4 @@ const App = (props: Props) => {
   )
 };
 
-export default withRouter(App);
+export default withRouter(App); // need this to inject navigation props
